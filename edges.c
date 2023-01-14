@@ -20,7 +20,7 @@ void build_node_edges(){
         return;
     }
     addedge(temp,x1,y1);
-    printf("edge %d %d is created\n",x1,y1);
+    //printf("edge %d %d is created\n",x1,y1);
     int x2,y2;
     if(scanf("%d %d", &x2, &y2) != 2){
         return;
