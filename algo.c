@@ -109,7 +109,11 @@ int isEmpty(Node **head) { return (*head) == NULL; }
 void print_lowest_route()
 {
     int x, y;
-    scanf("%d %d", &x, &y);
+    if(scanf("%d %d", &x, &y) == EOF)
+    {
+        printf("-1");
+        return;
+    }
     if (node_exists(x) == 0 || node_exists(y) == 0)
     {
         printf("-1");
