@@ -127,7 +127,7 @@ void print_lowest_route()
            printf("-1");
            return;
        }
-       printf("Dijsktra shortest path:%d\n", print);
+       printf("Dijsktra shortest path:%d \n", print);
 
     }
 }
