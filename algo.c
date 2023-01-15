@@ -127,7 +127,7 @@ void print_lowest_route()
            printf("-1");
            return;
        }
-       printf("Dijsktra shortest path:%d \n", print);
+       printf("Dijsktra shortest path: %d \n", print);
 
     }
 }
@@ -284,7 +284,7 @@ void TSP()
         return;
     }
     
-    printf("TSP shortest path:%d \n", *pshort);
+    printf("TSP shortest path: %d \n", *pshort);
     
 }
 void TSP_helper_cmd(pnode head, int *arr,int num, int curr,int *pmin)
