@@ -280,7 +280,7 @@ void TSP()
     free(arr);
     if (*pshort == SHRT_MAX)
     {
-        printf("TSP shortest path:-1 \n");
+        printf("TSP shortest path: -1 \n");
         return;
     }
     
