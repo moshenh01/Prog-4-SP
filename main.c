@@ -6,9 +6,12 @@ int main()
 {
     char ch;
 
-    while (scanf(" %c", &ch) != EOF)
-    {
+    while (scanf(" %c", &ch) != EOF )
+    { 
        // printf("%c\n", ch);
+       if (ch == 'Q'){
+              break;
+       }
         
         snd1:
         if (ch == 'A')
@@ -53,8 +56,9 @@ int main()
         }
 
     }
+
     rm_graph(head);
-    printf("Quit\n");
+    
             
     return 0;
 }
