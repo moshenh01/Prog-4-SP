@@ -217,7 +217,6 @@ void relax(pedge p_edge, Node **pq)
     {
         // printf("node- %d to node- %d , original dis: %d, new dis: %d\n",p_edge->startpoint->node_num,p_edge->endpoint->node_num, p_edge->endpoint->dis, p_edge->startpoint->dis + p_edge->weight);
         p_edge->endpoint->dis = p_edge->startpoint->dis + p_edge->weight; // update the distance of the node.
-        // p_edge->startpoint->dis = p_edge->startpoint->dis + p_edge->weight;
 
         // chande in the queue
         Node *temp = *pq;
@@ -258,33 +257,30 @@ void swap_place(int *arr, int num1, int num2)
 }
 void TSP()
 {
-    int num;
-    scanf("%d", &num);
+    int amount_of_nodes;
+    scanf("%d", &amount_of_nodes);
     //printf("num: %d\n", num);
-    int *arr = (int*)(malloc(sizeof(int)*num));
+    int *arr = (int*)(malloc(sizeof(int)*amount_of_nodes));
     int min = SHRT_MAX;
-    int * pmin=&min;
-    for(int i =0 ; i<num; i++)
-    {
-        scanf("%d", &arr[i]);
+    int * pshort=&min;
+    for(int i =0 ; i<amount_of_nodes; i++)
+    {   
+        scanf("%d", &arr[i]);//get the nodes into array.
     }
-    for(int i=0;i<num;i++)
+    for(int i=0;i<amount_of_nodes;i++)
     {
         swap_place(arr,0,i);
-        TSP_helper_cmd(head,arr,num,0,pmin);
+        TSP_helper_cmd(head,arr,amount_of_nodes,0,pshort);
         swap_place(arr,i,0);
     }
     free(arr);
-    if (*pmin == SHRT_MAX)
+    if (*pshort == SHRT_MAX)
     {
         printf("TSP shortest path:-1\n");
         return;
     }
-    {
-        /* code */
-    }
     
-    printf("TSP shortest path:%d\n", *pmin);
+    printf("TSP shortest path:%d\n", *pshort);
     
 }
 void TSP_helper_cmd(pnode head, int *arr,int num, int curr,int *pmin)

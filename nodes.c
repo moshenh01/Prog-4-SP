@@ -63,8 +63,7 @@ void insert_node(){
     if (temp->node_num == node_num)
     {
         //printf("node %d already exists\n",node_num);
-        //delete_node(node_num);
-        //build_empty_node(node_num);
+    
         delete_edges(temp->edges);
         temp->edges = NULL; 
         build_node_edgesforB(node_num);
